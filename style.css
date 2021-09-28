@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-*{
+html , *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+html,body{
+    width: 100%;
+    height:100vh;
+}
+
 body{
     font-family: 'Kumbh Sans', sans-se;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%) );
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    background: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%) );
     display: flex;
     justify-content: center;
      align-items: center;
@@ -74,8 +76,8 @@ article.active p{
     opacity: 1;
 }
 article.active{
-    min-height: 100px;
-    transition: all 0.1s ease-in-out;
+    min-height: 6.25rem;
+    transition: min-height 0.6s ease-in-out;
 }
 article.active .questions{
     font-weight: bold;
@@ -85,7 +87,8 @@ article.active .questions{
     justify-content:space-between;
     align-items: center;
     height:2rem;
-    transition: all 0.7s ease-in-out;
+    transition: height 0.7s ease-in-out;
+    font-size: 14px;
 
 } 
 .questions:hover{
@@ -121,6 +124,7 @@ article.active .questions::after{
 
 /* mobile */
 @media (max-width:768px){
+  
     .container{
         width:20.4375rem;
         /* height:40.1875rem ; */
@@ -140,6 +144,9 @@ article.active .questions::after{
         padding: 0;
         
     }
+    .questions{
+        font-size: 13px;
+    }
     .content{
         margin-top: 3.9375rem;
     }
@@ -150,6 +157,11 @@ article.active .questions::after{
     .shapeBox{
       display: none;
 
-        
+    }
+    .title{
+        margin-top: 31px;
+    }
+    .attribution{
+        display: none;
     }
 }
